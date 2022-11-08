@@ -7,10 +7,18 @@ public class HipotenusCalculatorApplication {
         System.out.println("1. kenarı giriniz: ");
         int a = scanner.nextInt();
 
-        System.out.println("1. kenarı giriniz: ");
+        System.out.println("2. kenarı giriniz: ");
         int b = scanner.nextInt();
 
-        double c = Math.sqrt((a*a) + (b*b));
-        System.out.println("Hipotenüs : " + c);
+        System.out.println("3. kenarı giriniz: ");
+        int c = scanner.nextInt();
+
+        double u = (a + b + c) / 2;
+        double alan;
+        alan = Math.sqrt(u * (u - a) * (u - b) * (u - c));
+
+
+        System.out.println("Üçgenin çevresi : " + (u * 2));
+        System.out.println("Üçgenin alanı : " + alan);
     }
 }
