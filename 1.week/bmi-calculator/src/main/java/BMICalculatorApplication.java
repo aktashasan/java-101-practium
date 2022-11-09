@@ -7,13 +7,13 @@ public class BMICalculatorApplication {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Lütfen boyunuzu (metre cinsinde) giriniz : ");
-        var length = scanner.nextDouble();
+        var height = scanner.nextDouble();
 
         System.out.println("Lütfen kilonuzu giriniz :");
-        var kilo = scanner.nextInt();
+        var weight = scanner.nextInt();
 
         BMIMethod bmi = new BMIMethod();
-        System.out.println("Vücut Kitle İndeksiniz : " + bmi.calculate(length, kilo));
+        System.out.println("Vücut Kitle İndeksiniz : " + bmi.calculate(height, weight));
 
     }
 }
