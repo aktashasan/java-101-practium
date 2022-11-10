@@ -89,6 +89,8 @@ public class HoroscopeApplication {
             }else {
                 System.out.println("Oğlak burcu");
             }
+        }else {
+            System.out.println("girdiğiniz ay veya gün geçersizdir.");
         }
 
     }
