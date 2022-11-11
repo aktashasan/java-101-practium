@@ -8,7 +8,7 @@ public class MinMaxNumberApplication {
         System.out.print("Kaç tane sayı gireceksiniz: ");
         int count = scanner.nextInt();
 
-        int number, min=2_147_483_647, max=-2_147_483_647;
+        int number, min=Integer.MAX_VALUE, max=Integer.MIN_VALUE;
 
         for (int i =1; i<=count;i++){
             System.out.print(i + ". sayıyı giriniz:");
