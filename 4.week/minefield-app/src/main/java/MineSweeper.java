@@ -18,15 +18,6 @@ public class MineSweeper {
         this.size =(this.rowNumber * this.colNumber)/4;
     }
 
-    public void map(){
-        for(int i = 0; i < rowNumber; i++){
-            for(int j = 0; j < colNumber; j++){
-                System.out.print(this.gameMap[i][j] +  " ");
-            }
-            System.out.println();
-        }
-    }
-
     void gameMap(){
         for (int i = 0; i < rowNumber; i++) {
             for (int j = 0; j < colNumber; j++) {
@@ -36,7 +27,7 @@ public class MineSweeper {
     }
 
 
-    public void plantedMine() {
+    public void mine() {
         Random rand = new Random();
         for(int i = 0; i < size; i++){
             int randomRow = rand.nextInt(rowNumber);
@@ -61,7 +52,7 @@ public class MineSweeper {
         }
     }
 
-    void printMineMap(){
+    void printMine(){
         for(int i = 0; i < rowNumber; i++){
             for(int j = 0; j < colNumber; j++){
                 System.out.print(this.mineMap[i][j] + " ");
@@ -76,7 +67,7 @@ public class MineSweeper {
 
         gameMap();
         System.out.println("Mayınların Konumu");
-        plantedMine();
+        mine();
         System.out.println("Mayın Tarlası Oyununa Hoşgeldiniz");
 
         while(totalMove > 0) {
@@ -99,7 +90,7 @@ public class MineSweeper {
             } else {
                 if (this.mineMap[row][col] == "*") {
                     System.out.println("Game Over!!");
-                    printMineMap();
+                    printMine();
                     break;
                 }if( ! this.gameMap[row][col].equals("-") ){
                     System.out.println("Bu hamleyi zaten yaptınız !");
@@ -134,7 +125,6 @@ public class MineSweeper {
             printMap();
         }
     }
-
 
     public void printMap(){
         for(int i = 0; i < rowNumber; i++){
