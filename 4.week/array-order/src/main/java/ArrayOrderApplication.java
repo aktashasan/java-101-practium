@@ -6,19 +6,19 @@ public class ArrayOrderApplication {
 
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Dizinin boyutu n : ");
+        System.out.print("Dizinin boyutu n : "); // dizi boyutu girilir.
         int n = scanner.nextInt();
 
         int[] array = new int[n];
 
         System.out.println("Dizinin Elemanlarını giriniz : ");
 
-        for (int i=0 ; i< array.length;i++) {
+        for (int i=0 ; i< array.length;i++) {   //for döngüsüyle elemanlar tek tek alınır
             System.out.println((i+1) + ".Elemanı giriniz");
             array[i] = scanner.nextInt();
         }
 
-        Arrays.sort(array);
+        Arrays.sort(array);     //Array sınıfı ile sıralama yapılır
 
         System.out.println("Sıralama : " + Arrays.toString(array));
     }
